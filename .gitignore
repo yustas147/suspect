@@ -1,0 +1,6 @@
+/**/.git
+*.pyc
+*.pyo
+*.zip
+*.tgz
+*.gz
