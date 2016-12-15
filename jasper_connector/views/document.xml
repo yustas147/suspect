@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        ##############################################################################
+        #
+        #    jasper_connector module for OpenERP, 
+        #    Copyright (C) 2010-2013 SYLEAM Info Services ([http://www.Syleam.fr/]) 
+        #                  Damien CRIER
+        #                  Christophe CHAUVET [christophe.chauvet@gmail.com]
+        #
+        #    This file is a part of jasper_connector
+        #
+        #    jasper_connector is free software: you can redistribute it and/or modify
+        #    it under the terms of the GNU General Public License as published by
+        #    the Free Software Foundation, either version 3 of the License, or
+        #    (at your option) any later version.
+        #
+        #    jasper_connector is distributed in the hope that it will be useful,
+        #    but WITHOUT ANY WARRANTY; without even the implied warranty of
+        #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        #    GNU General Public License for more details.
+        #
+        #    You should have received a copy of the GNU General Public License
+        #    along with this program.  If not, see [http://www.gnu.org/licenses/].
+        #
+        ##############################################################################
+
+
+        ##
+        # Document extension
+        #
+        <record id="view_document_extension_tree" model="ir.ui.view">
+            <field name="name">Jasper Document Extension [list]</field>
+            <field name="model">jasper.document.extension</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Document extensions">
+                    <field name="jasper_code"/>
+                    <field name="extension"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_document_extension_form" model="ir.ui.view">
+            <field name="name">Jasper Document Extension [form]</field>
+            <field name="model">jasper.document.extension</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Documents extensions">
+                    <field name="name" select="2"/>
+                    <field name="jasper_code" select="1"/>
+                    <field name="extension" select="2"/>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_document_extension_view">
+            <field name="name">Document Extension</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">jasper.document.extension</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+
+        <record model="ir.actions.act_window.view" id="open_document_extension_form">
+            <field name="act_window_id" ref="act_open_document_extension_view"/>
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_document_extension_form"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="open_document_extension_tree">
+            <field name="act_window_id" ref="act_open_document_extension_view"/>
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_document_extension_tree"/>
+        </record>
+
+        <menuitem id="menu_jasper_document_extension" 
+            parent="menu_jasper_conn"
+            sequence="60"
+            action="act_open_document_extension_view"/>
+
+        ##
+        # Document parameter
+        #
+        <record id="view_jasper_document_parameter_tree" model="ir.ui.view">
+            <field name="name">jasper.document.parameter.tree</field>
+            <field name="model">jasper.document.parameter</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Parameter">
+                    <field name="enabled"/>
+                    <field name="name"/>
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_jasper_document_parameter_form" model="ir.ui.view">
+            <field name="name">jasper.document.parameter.form</field>
+            <field name="model">jasper.document.parameter</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Parameter">
+                    <field name="name" select="1"/>
+                    <field name="enabled" select="2"/>
+                    <field name="code" select="1" colspan="4"/>
+                    <separator string="Legend" colspan="4"/>
+                    <group colspan="4" col="2">
+                        <label align="0.0" string="Use [[ o.name ]] to called browse object, see below for possibility" colspan="4"/>
+                        <label align="0.0" string="c: for user s company" colspan="4"/>
+                        <label align="0.0" string="o: for object" colspan="4"/>
+                        <label align="0.0" string="u: for current user (user launched the report)" colspan="4"/>
+                        <label align="0.0" string="t: for time module" colspan="4"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        ##
+        # Document label
+        #
+        <record id="view_jasper_document_label_tree" model="ir.ui.view">
+            <field name="name">jasper.document.label.tree</field>
+            <field name="model">jasper.document.label</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Label">
+                    <field name="name"/>
+                    <field name="value"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_jasper_document_label_form" model="ir.ui.view">
+            <field name="name">jasper.document.label.form</field>
+            <field name="model">jasper.document.label</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Label">
+                    <field name="name" colspan="4"/>
+                    <field name="value" colspan="4"/>
+                    <separator string="Legend" colspan="4"/>
+                    <group colspan="4" col="2">
+                        <label align="0.0" string="All label are pass as parameter to the JasperServer, and start with I18N_" colspan="4"/>
+                        <label align="0.0" string="These parameters are translate in the language define in the general tab" colspan="4"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        ##
+        # Document
+        #
+        <record id="view_document_tree" model="ir.ui.view">
+            <field name="name">Jasper Document [tree]</field>
+            <field name="model">jasper.document</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Jasper Document" colors="#f66a00:enabled==False" >
+                    <field name="enabled"/>
+                    <field name="name"/>
+                    <field name="format"/>
+                    <field name="model_id"/>
+                    <field name="mode"/>
+                    <field name="sequence"/>
+                    <field name="lang"/>
+                    <field name="report_unit"/>
+                    <field name="attachment"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_document_form" model="ir.ui.view">
+            <field name="name">Jasper Document</field>
+            <field name="model">jasper.document</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Jasper Document" version="7.0">
+                    <header>
+                        <button string="Check report" icon="gtk-ok" type="object" name="check_report"/>
+                        <button string="Import JRXML" icon="gtk-ok" type="action" name="%(load_jrxml_file_wizard_action)d"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <div class="oe_edit_only">
+                                <label for="name" />
+                                <field name="enabled" class="oe_inline"/>
+                                <label string="Active" for="enabled"/>
+                            </div>
+                            <h1><field name="name" /></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="format"/>
+                            </group>
+                            <group>
+                                <field name="sequence"/>
+                            </group>
+                        </group>
+
+                        <notebook colspan="4">
+                            <page string="General">
+                                <group colspan="4" col="4">
+                                    <field name="model_id" domain="[('osv_memory','=', False)]"/>
+                                    <field name="server_id"/>
+                                    <field name="report_unit" attrs="{'required': [('mode','!=', 'multi')], 'readonly': [('mode','=', 'multi')]}"/>
+                                    <newline/>
+                                    <field name="jasper_file" colspan="4" attrs="{'required': [('mode','!=', 'multi')], 'readonly': [('mode','=', 'multi')]}"/>
+                                    <field name="mode"/>
+                                    <field name="report_id"/>
+                                    <field name="ctx" colspan="4"/>
+                                    <field name="only_one" attrs="{'readonly': [('mode','=', 'multi')]}"/>
+                                    <newline/>
+                                    <field name="lang" colspan="4"/>
+                                    <field name="duplicate" colspan="4"/>
+                                    <separator string="Attachment" colspan="4"/>
+                                    <field name="attachment" colspan="4"/>
+                                    <field name="attachment_use"/>
+                                </group>
+                            </page>
+                            <page string="Groups">
+                                <field name="group_ids" nolabel="1" colspan="4"/>
+                            </page>
+                            <page string="Blocking">
+                                <group>
+                                    <separator string="Condition to launch the printing report" colspan="4"/>
+                                    <field name="check_sel"/>
+                                    <field name="message_simple" attrs="{'readonly': [('check_sel','!=', 'simple')], 'required': [('check_sel','=', 'simple')]}"/>
+                                    <field name="check_simple" attrs="{'readonly': [('check_sel','!=', 'simple')], 'required': [('check_sel','=', 'simple')]}"/>
+                                </group>
+                            </page>
+                            <page string="PDF Merge" attrs="{'invisible': [('format','!=', 'PDF')]}">
+                                <group>
+                                    <field name="pdf_begin"/>
+                                    <field name="pdf_ended"/>
+                                </group>
+                            </page>
+                            <page string="XML" attrs="{'invisible': [('mode','!=','xml')]}">
+                                <field name="depth"/>
+                            </page>
+                            <page string="SQL View" attrs="{'invisible': [('mode','!=','sql')]}">
+                                <separator string="Enter the name of the view" colspan="4"/>
+                                <field name="sql_name" colspan="4" nolabel="1"/>
+                                <separator string="Enter the select query of the view only" colspan="4"/>
+                                <field name="sql_view" colspan="4" nolabel="1" attrs="{'required': [('sql_name','!=', False)]}"/>
+                            </page>
+                            <page string="Processes" attrs="{'invisible': [('mode','=','multi')]}">
+                                <separator string="Execute SQL query before treatment" colspan="4"/>
+                                <field name="before" colspan="4" nolabel="1"/>
+                                <separator string="Execute SQL query after treatment" colspan="4"/>
+                                <field name="after" colspan="4" nolabel="1"/>
+                                <separator string="Legend" colspan="4"/>
+                                <group colspan="4" col="6">
+                                    <label string="%%(id)s" colspan="2"/>
+                                    <newline/>
+                                </group>
+                            </page>
+                            <page string="Parameters" attrs="{'invisible': [('mode','=','multi')]}">
+                                <field name="param_ids" nolabel="1" />
+                            </page>
+                            <page string="Reports" attrs="{'invisible': [('mode','!=','multi')]}">
+                                <separator string="Select report to launch when this report is launched" colspan="4"/>
+                                <field name="child_ids" nolabel="1" domain="[('mode','!=', 'multi'),('model_id','=',model_id),('enabled','=',True)]"/>
+                            </page>
+                            <page string="Labels">
+                                <field name="label_ids" nolabel="1" />
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_document_search" model="ir.ui.view">
+            <field name="name">jasper.document.search</field>
+            <field name="model">jasper.document</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search string="Documents">
+                    <filter string="Enabled" icon="terp-accessories-archiver" domain="[('enabled','=',1)]"/>
+                    <separator orientation="vertical"/>
+                    <field name="name"/>
+                    <field name="model_id"/>
+                    <field name="report_unit"/>
+                    <newline/>
+                    <group  expand="0" string="Group by..." >
+                        <filter string='Model' icon="terp-stock_symbol-selection" domain="[]" context="{'group_by' : 'model_id'}" />
+                        <separator orientation="vertical"/>
+                        <filter string='Mode' icon="terp-mrp" domain="[]" context="{'group_by' : 'mode'}" />
+                        <separator orientation="vertical"/>
+                        <filter string='Format' icon="terp-stock_symbol-selection" domain="[]" context="{'group_by' : 'format'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_document_view">
+            <field name="name">Document report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">jasper.document</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="open_document_form">
+            <field name="act_window_id" ref="act_open_document_view"/>
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_document_form"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="open_document_tree">
+            <field name="act_window_id" ref="act_open_document_view"/>
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_document_tree"/>
+        </record>
+
+        <menuitem id="menu_jasper_document" 
+            parent="menu_jasper_conn"
+            name="Documents"
+            sequence="20"
+            action="act_open_document_view"
+            groups="group_jasper_manager"/>
+    </data>
+</openerp>

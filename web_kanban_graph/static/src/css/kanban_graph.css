@@ -1,0 +1,18 @@
+.o_kanban_graph_section{
+    width: 100%;
+}
+.o_kanban_graph_section sgv.oe_graph {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.openerp .oe_kanban_view .oe_kanban_invoice {
+    min-width: 450px;
+    cursor: default;
+    min-height: 245px !important;
+    width: 523px;
+}
+.nvtooltip h3{
+    margin: 0 !important;
+}

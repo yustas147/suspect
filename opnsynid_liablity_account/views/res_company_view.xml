@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2015 OpenSynergy Indonesia>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="form_resCompany">
+            <field name="name">Company - Add Liability account</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="opnsynid_accounting_report_configuration_page.form_resCompany"/>
+            <field name="mode">extension</field>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//page[@name='acc_report_config']" position="inside">
+                        <group name="liability_account" colspan="4" col="2" string="Liability Accounts">
+                            <field name="liability_ids" colspan="2" nolabel="1"/>
+                        </group>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+    </data>
+</openerp>
+
