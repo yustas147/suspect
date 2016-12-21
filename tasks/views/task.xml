@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="calendar_task" model="ir.ui.view">
+            <field name="model">tasks.task</field>
+            <field name="arch" type="xml">
+                <calendar date_start="start_date" date_stop="finish_date" color="responsible_id">
+                    <field name="name"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record id="task_gant_view" model="ir.ui.view">
+            <field name="name">task.gantt</field>
+            <field name="model">tasks.task</field>
+            <field name="arch" type="xml">
+                <gantt string="Task Gant"
+                       date_start="start_date" date_stop="finish_date"
+                       color="responsible_id">
+                            <field name="name"/>
+                </gantt>
+            </field>
+        </record>
+
+        <record id="task_form_view" model="ir.ui.view">
+            <field name="name">task.form</field>
+            <field name="model">tasks.task</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="responsible_id"/>
+                            </group>
+                            <group>
+                                <field name="start_date"/>
+                                <field name="finish_date"/>
+                            </group>
+                        </group>
+
+
+                        <notebook>
+                            <page string="Description">
+                                <field name="description" attrs="{'readonly': [('state','=', 'done')]}"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="task_search_view" model="ir.ui.view">
+            <field name="name">task.search</field>
+            <field name="model">tasks.task</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="start_date"/>
+                    <field name="finish_date"/>
+                    <field name="responsible_id"/>
+                    <filter name="my_task" string="My Task" domain="[('responsible_id', '=', uid)]"/>
+                    <group string="Group By">
+                        <filter name="by_responsible" string="Responsible"
+                                context="{'group_by': 'responsible_id'}"/>
+                        <filter name="by_end_date" string="End Date"
+                                context="{'group_by': 'finish_date'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="task_tree_view" model="ir.ui.view">
+            <field name="name">task.tree</field>
+            <field name="model">tasks.task</field>
+            <field name="arch" type="xml">
+                <tree string="Task Tree">
+                    <field name="name"/>
+                    <field name="responsible_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="task_list_action">
+            <field name="name">Task</field>
+            <field name="res_model">tasks.task</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar,gantt</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the task
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="main_task_menu" name="Task"/>
+
+        <menuitem id="task_menu" name="Task"
+                  parent="main_task_menu"/>
+
+        <menuitem id="new_task_menu" name="New Task" parent="task_menu"
+                  action="task_list_action"/>
+
+    </data>
+</openerp>
