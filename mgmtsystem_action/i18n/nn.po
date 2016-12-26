@@ -1,0 +1,479 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * mgmtsystem_action
+# 
+# Translators:
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: management-system (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-19 00:53+0000\n"
+"PO-Revision-Date: 2016-04-18 20:11+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"Language-Team: Norwegian Nynorsk (http://www.transifex.com/oca/OCA-management-system-8-0/language/nn/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: nn\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: mgmtsystem_action
+#: model:email.template,body_html:mgmtsystem_action.action_email_template_reminder_action
+msgid ""
+"\n"
+"<p>Hello,</p>\n"
+"\n"
+"<p>\n"
+"  This is an automated message to remind you that the\n"
+"  following action is due to be completed in 10 days (${object.date_deadline}):\n"
+"\n"
+"  <a href=\"${object.get_action_url()}\">${object.get_action_url()}</a>\n"
+"</p>\n"
+"\n"
+"<p>\n"
+"  Thank you and have a nice day.<br />\n"
+"  --<br />\n"
+"  Odoo\n"
+"</p>\n"
+"        \n"
+"      "
+msgstr ""
+
+#. module: mgmtsystem_action
+#: model:email.template,body_html:mgmtsystem_action.wkf_action_email_template_reminder_action
+msgid ""
+"\n"
+"<p>Hello,</p>\n"
+"<p>A new action has been assigned to you:\n"
+"  <a href=\"${object.get_action_url()}\">${object.get_action_url()}</a>\n"
+"</p>\n"
+"<p>${object.description}</p>\n"
+"\n"
+"<p>\n"
+"  Thank you<br />\n"
+"  --<br />\n"
+"  Odoo\n"
+"</p>\n"
+"        \n"
+"      "
+msgstr ""
+
+#. module: mgmtsystem_action
+#: model:email.template,subject:mgmtsystem_action.wkf_action_email_template_reminder_action
+msgid "${object.name}"
+msgstr ""
+
+#. module: mgmtsystem_action
+#: model:ir.model,name:mgmtsystem_action.model_mgmtsystem_action
+#: view:mgmtsystem.action:mgmtsystem_action.view_mgmtsystem_action_filter
+#: view:mgmtsystem.action:mgmtsystem_action.view_mgmtsystem_action_form
+#: view:mgmtsystem.action:mgmtsystem_action.view_mgmtsystem_action_tree
+msgid "Action"
+msgstr "Tiltak"
+
+#. module: mgmtsystem_action
+#: model:ir.actions.act_window,name:mgmtsystem_action.open_mgmtsystem_action_list
+#: model:ir.ui.menu,name:mgmtsystem_action.menu_config_action
+#: model:ir.ui.menu,name:mgmtsystem_action.menu_open_action
+msgid "Actions"
+msgstr "Tiltak"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,active:0
+msgid "Active"
+msgstr "Aktiv"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,categ_id:0
+msgid "Category"
+msgstr "Kategori"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,date:0
+msgid "Claim Date"
+msgstr "Reklamasjonsdato"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,name:0
+msgid "Claim Subject"
+msgstr "Reklamasjonsobjekt"
+
+#. module: mgmtsystem_action
+#: model:ir.model,name:mgmtsystem_action.model_mgmtsystem_action_stage
+msgid "Claim stages"
+msgstr ""
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,date_closed:0
+#: model:mgmtsystem.action.stage,name:mgmtsystem_action.stage_close
+msgid "Closed"
+msgstr "Stengd"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action.stage,case_default:0
+msgid "Common to All Teams"
+msgstr ""
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,company_id:0
+msgid "Company"
+msgstr ""
+
+#. module: mgmtsystem_action
+#: selection:mgmtsystem.action,type_action:0
+msgid "Corrective Action"
+msgstr "Korrigerande handling"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,create_uid:0
+#: field:mgmtsystem.action.stage,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action.stage,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,create_date:0
+msgid "Creation Date"
+msgstr "Opprettingsdato"
+
+#. module: mgmtsystem_action
+#: view:mgmtsystem.action:mgmtsystem_action.view_mgmtsystem_action_form
+msgid "Date"
+msgstr "Dato"
+
+#. module: mgmtsystem_action
+#: help:mgmtsystem.action,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr ""
+
+#. module: mgmtsystem_action
+#: view:mgmtsystem.action:mgmtsystem_action.view_mgmtsystem_action_form
+#: field:mgmtsystem.action,date_deadline:0
+msgid "Deadline"
+msgstr "Frist"
+
+#. module: mgmtsystem_action
+#: view:mgmtsystem.action:mgmtsystem_action.view_mgmtsystem_action_form
+#: field:mgmtsystem.action,description:0
+msgid "Description"
+msgstr "Beskriving"
+
+#. module: mgmtsystem_action
+#: help:mgmtsystem.action,email_from:0
+msgid "Destination email for email gateway."
+msgstr "Mottakar sin epost for epost grensesnitt."
+
+#. module: mgmtsystem_action
+#: model:mgmtsystem.action.stage,name:mgmtsystem_action.stage_draft
+msgid "Draft"
+msgstr ""
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,email_from:0
+msgid "Email"
+msgstr "E-post"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action.stage,is_ending:0
+msgid "Ending stage"
+msgstr ""
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,message_follower_ids:0
+msgid "Followers"
+msgstr "Tilhengarar"
+
+#. module: mgmtsystem_action
+#: view:mgmtsystem.action:mgmtsystem_action.view_mgmtsystem_action_filter
+msgid "Group By..."
+msgstr "Grupper etter..."
+
+#. module: mgmtsystem_action
+#: selection:mgmtsystem.action,priority:0
+msgid "High"
+msgstr "Høg"
+
+#. module: mgmtsystem_action
+#: help:mgmtsystem.action,message_summary:0
+msgid ""
+"Holds the Chatter summary (number of messages, ...). This summary is "
+"directly in html format in order to be inserted in kanban views."
+msgstr "Inneheld meldingsoppsummering (tal på meldingar, ...). Denne oppsummeringa er i direkte html format slik at den kan settast inn i kanban visning."
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,id:0 field:mgmtsystem.action.stage,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: mgmtsystem_action
+#: help:mgmtsystem.action,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr "Om det er merka av nye meldingar så krever det di merksemd."
+
+#. module: mgmtsystem_action
+#: help:mgmtsystem.action.stage,case_default:0
+msgid ""
+"If you check this field, this stage will be proposed by default on each "
+"sales team. It will not assign this stage to existing teams."
+msgstr ""
+
+#. module: mgmtsystem_action
+#: selection:mgmtsystem.action,type_action:0
+msgid "Immediate Action"
+msgstr "Umiddelbare tiltak"
+
+#. module: mgmtsystem_action
+#: selection:mgmtsystem.action,type_action:0
+msgid "Improvement Opportunity"
+msgstr "Forbedringstiltak"
+
+#. module: mgmtsystem_action
+#: model:mgmtsystem.action.stage,name:mgmtsystem_action.stage_open
+msgid "In Progress"
+msgstr "Pågår"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,message_is_follower:0
+msgid "Is a Follower"
+msgstr "Er en fylgjar"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,message_last_post:0
+msgid "Last Message Date"
+msgstr ""
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,write_uid:0
+#: field:mgmtsystem.action.stage,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action.stage,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: mgmtsystem_action
+#: help:mgmtsystem.action.stage,section_ids:0
+msgid ""
+"Link between stages and sales teams. When set, this limitate the current "
+"stage to the selected sales teams."
+msgstr ""
+
+#. module: mgmtsystem_action
+#: selection:mgmtsystem.action,priority:0
+msgid "Low"
+msgstr "Låg"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,message_ids:0
+msgid "Messages"
+msgstr "Meldingar"
+
+#. module: mgmtsystem_action
+#: help:mgmtsystem.action,message_ids:0
+msgid "Messages and communication history"
+msgstr ""
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,action_next:0
+msgid "Next Action"
+msgstr "Neste handling"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,date_action_next:0
+msgid "Next Action Date"
+msgstr "Dato for neste tiltak"
+
+#. module: mgmtsystem_action
+#: selection:mgmtsystem.action,priority:0
+msgid "Normal"
+msgstr "Vanleg"
+
+#. module: mgmtsystem_action
+#: model:ir.actions.server,name:mgmtsystem_action.mgmtsystem_action_server_action
+msgid "Notify the person in charge of the new action"
+msgstr "Sei frå til ansvarleg person for det nye tiltaket"
+
+#. module: mgmtsystem_action
+#: view:board.board:mgmtsystem_action.board_mgmtsystem_action_form
+msgid "Open Actions"
+msgstr "Opne tiltak"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,partner_id:0
+msgid "Partner"
+msgstr "Partner"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,partner_phone:0
+msgid "Phone"
+msgstr "Telefon"
+
+#. module: mgmtsystem_action
+#: selection:mgmtsystem.action,type_action:0
+msgid "Preventive Action"
+msgstr "Forebyggande Tiltak"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,priority:0
+msgid "Priority"
+msgstr "Prioritet"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,ref:0 field:mgmtsystem.action,reference:0
+msgid "Reference"
+msgstr "Referanse"
+
+#. module: mgmtsystem_action
+#: model:email.template,subject:mgmtsystem_action.action_email_template_reminder_action
+msgid "Reminder on Action: \"${object.name}\""
+msgstr ""
+
+#. module: mgmtsystem_action
+#: model:ir.actions.server,name:mgmtsystem_action.action_email_reminder_action
+msgid "Reminder to Responsible"
+msgstr ""
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,resolution:0
+msgid "Resolution"
+msgstr "Løysing"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,type_action:0
+msgid "Response Type"
+msgstr "Responstype"
+
+#. module: mgmtsystem_action
+#: view:mgmtsystem.action:mgmtsystem_action.view_mgmtsystem_action_form
+#: field:mgmtsystem.action,user_id:0
+msgid "Responsible"
+msgstr "Ansvarleg"
+
+#. module: mgmtsystem_action
+#: help:mgmtsystem.action,section_id:0
+msgid ""
+"Responsible sales team. Define Responsible user and Email account for mail "
+"gateway."
+msgstr "Ansvarleg salgsteam. Definer ansvarleg brukar og epostkonto for epost grensesnitt."
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,cause:0
+msgid "Root Cause"
+msgstr "Rotårsak"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,section_id:0
+msgid "Sales Team"
+msgstr "Salsteam"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action.stage,section_ids:0
+msgid "Sections"
+msgstr ""
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action.stage,sequence:0
+msgid "Sequence"
+msgstr ""
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,stage_id:0
+msgid "Stage"
+msgstr "Fase"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action.stage,name:0
+msgid "Stage Name"
+msgstr ""
+
+#. module: mgmtsystem_action
+#: model:ir.actions.act_window,name:mgmtsystem_action.mgmtsystem_action_stage_action
+#: model:ir.ui.menu,name:mgmtsystem_action.menu_mgmtsystem_action_stages
+#: view:mgmtsystem.action.stage:mgmtsystem_action.mgmtsystem_action_stage_tree_view
+msgid "Stages"
+msgstr ""
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action.stage,is_starting:0
+msgid "Starting stage"
+msgstr ""
+
+#. module: mgmtsystem_action
+#: view:mgmtsystem.action:mgmtsystem_action.view_mgmtsystem_action_tree
+msgid "Subject"
+msgstr "Emne"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,message_summary:0
+msgid "Summary"
+msgstr "Oppsummering."
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,system_id:0
+msgid "System"
+msgstr "Systemet"
+
+#. module: mgmtsystem_action
+#: help:mgmtsystem.action,email_cc:0
+msgid ""
+"These email addresses will be added to the CC field of all inbound and "
+"outbound emails for this record before being sent. Separate multiple email "
+"addresses with a comma"
+msgstr "Desse e-postadressene vil bli lage til i kopi-feltet for alle inngåande og utgåande e-postar før dei vert sende. Skil fleire e-postadresser med komma."
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,user_fault:0
+msgid "Trouble Responsible"
+msgstr "Problemansvarleg"
+
+#. module: mgmtsystem_action
+#: view:mgmtsystem.action:mgmtsystem_action.view_mgmtsystem_action_filter
+msgid "Type"
+msgstr "Type"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,message_unread:0
+msgid "Unread Messages"
+msgstr "Ulesne meldingar"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,write_date:0
+msgid "Update Date"
+msgstr "Dato oppdatert"
+
+#. module: mgmtsystem_action
+#: help:mgmtsystem.action.stage,sequence:0
+msgid "Used to order stages. Lower is better."
+msgstr ""
+
+#. module: mgmtsystem_action
+#: view:mgmtsystem.action:mgmtsystem_action.view_mgmtsystem_action_filter
+msgid "User"
+msgstr "Brukar"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,email_cc:0
+msgid "Watchers Emails"
+msgstr "Overvåkarane sine e-postar"
+
+#. module: mgmtsystem_action
+#: field:mgmtsystem.action,website_message_ids:0
+msgid "Website Messages"
+msgstr ""
+
+#. module: mgmtsystem_action
+#: help:mgmtsystem.action,website_message_ids:0
+msgid "Website communication history"
+msgstr ""
+
+#. module: mgmtsystem_action
+#: model:ir.actions.act_window,name:mgmtsystem_action.action_mgmtsystem_action
+msgid "mgmtsystem.action.window"
+msgstr ""

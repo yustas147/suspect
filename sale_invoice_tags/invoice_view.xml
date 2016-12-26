@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="invoice_view_add_tags_inherit">
+            <field name="name">invoice.view.inherit.add.tags</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="categ_ids" widget="many2many_tags"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="invoice_tree_view_add_tags_inherit">
+            <field name="name">invoice.tree.view.inherit.add.tags</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='origin']" position="after">
+                    <field name="categ_ids" widget="many2many_tags" invisible="1"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="invoice_search_view_add_tags_inherit">
+            <field name="name">invoice.search.view.inherit.add.tags</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='period_id']" position="after">
+                    <field name="categ_ids" string="Tags"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

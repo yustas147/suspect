@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+<report 
+            id="voucher_ext"
+            model="account.voucher"
+            string="Payment"
+            report_type="qweb-pdf"
+            name="voucher_print.report_voucher"
+            attachment_use="False"
+            file="voucher_print"
+        />
+    </data>
+</openerp>

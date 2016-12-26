@@ -1,0 +1,126 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* voucher_print
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20150526\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-06-19 02:04+0000\n"
+"PO-Revision-Date: 2016-08-31 15:46-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: Ark74\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: Spanish\n"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid ""
+"- \n"
+"        \t\t\tAddress:"
+msgstr ""
+"- \n"
+"        \t\t\tDirección:"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "- Address:"
+msgstr "- Dirección:"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid ".................."
+msgstr "_______________________"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "......................."
+msgstr "_______________________"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Accountant:"
+msgstr "Cuenta:"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Amount of"
+msgstr "La cantidad de"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Manager:"
+msgstr "Administrador:"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "No."
+msgstr "No."
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Notes:"
+msgstr "Observaciones"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Paid by:"
+msgstr "Pagado por:"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Paid to"
+msgstr "Pagado a"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Paid to:"
+msgstr "Pagado a:"
+
+#. module: voucher_print
+#: model:ir.actions.report.xml,name:voucher_print.voucher_ext
+msgid "Payment"
+msgstr "Pago"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Payment Date:"
+msgstr "Fecha de pago:"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Payment Voucher"
+msgstr "Comprobante de Pago"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Payment method"
+msgstr "Método de pago"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Receipt Voucher"
+msgstr "Recibo de Comprobante"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Received from"
+msgstr "Recibio de"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Reference/Description:"
+msgstr "Referencia/Descripción"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Responsible:"
+msgstr "Responsable:"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "With Reference/as value of"
+msgstr "Con referencia/como valor de"

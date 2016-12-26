@@ -1,0 +1,124 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* voucher_print
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20150526\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-06-19 02:04+0000\n"
+"PO-Revision-Date: 2015-06-19 02:04+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "- \n"
+"        			Address:"
+msgstr "- \n"
+"        			العنوان:"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "- Address:"
+msgstr "- العنوان:"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid ".................."
+msgstr ".................."
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "......................."
+msgstr "......................."
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Accountant:"
+msgstr "محاسب:"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Amount of"
+msgstr "مبلغاً قدره"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Manager:"
+msgstr "المدير:"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "No."
+msgstr "رقم"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Notes:"
+msgstr "ملاحظات:"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Paid by:"
+msgstr "مدفوع بواسطة:"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Paid to"
+msgstr "دفعنا الى"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Paid to:"
+msgstr "مدفوع الى:"
+
+#. module: voucher_print
+#: model:ir.actions.report.xml,name:voucher_print.voucher_ext
+msgid "Payment"
+msgstr "سند"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Payment Date:"
+msgstr "تاريخ الدفع:"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Payment Voucher"
+msgstr "سند دفع"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Payment method"
+msgstr "طريقة الدفع"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Receipt Voucher"
+msgstr "سند قبض"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Received from"
+msgstr "إستلمنا من"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Reference/Description:"
+msgstr "مرجع/وصف:"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "Responsible:"
+msgstr "مسؤل:"
+
+#. module: voucher_print
+#: view:website:voucher_print.report_voucher_document
+msgid "With Reference/as value of"
+msgstr "المرجع / مقابل"
+
