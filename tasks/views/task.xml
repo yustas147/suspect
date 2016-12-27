@@ -23,6 +23,18 @@
             </field>
         </record>
 
+        <record id="task_graph_bar" model="ir.ui.view">
+            <field name="name">task.graph</field>
+            <field name="model">tasks.task</field>
+            <field name="arch" type="xml">
+                <graph type="bar">
+                    <field name="finish_date" type="row"/>
+                    <field name="responsible_id" type="row"/>
+                    <!-- field name="effective_hours" type="measure"/ -->
+                </graph>
+            </field>
+        </record>
+
         <record id="task_form_view" model="ir.ui.view">
             <field name="name">task.form</field>
             <field name="model">tasks.task</field>
@@ -32,6 +44,7 @@
                         <group>
                             <group>
                                 <field name="name"/>
+                                <field name="manager_id"/>
                                 <field name="responsible_id"/>
                             </group>
                             <group>
@@ -40,10 +53,9 @@
                             </group>
                         </group>
 
-
                         <notebook>
                             <page string="Description">
-                                <field name="description" attrs="{'readonly': [('state','=', 'done')]}"/>
+                                <field name="description"/> <!-- attrs="{'readonly': [('state','=', 'done')]}" -->
                             </page>
                         </notebook>
                     </sheet>
@@ -51,22 +63,22 @@
             </field>
         </record>
 
-        <record id="task_search_view" model="ir.ui.view">
-            <field name="name">task.search</field>
+        <record id="task_view_filter" model="ir.ui.view">
+            <field name="name">task.view.search</field>
             <field name="model">tasks.task</field>
             <field name="arch" type="xml">
                 <search>
                     <field name="name"/>
                     <field name="description"/>
                     <field name="start_date"/>
-                    <field name="finish_date"/>
+                    <!-- field name="finish_date"/ -->
                     <field name="responsible_id"/>
-                    <filter name="my_task" string="My Task" domain="[('responsible_id', '=', uid)]"/>
+                    <filter name="my_task" string="My Task" domain="[('responsible_id', '=', 'uid')]"/>
                     <group string="Group By">
                         <filter name="by_responsible" string="Responsible"
                                 context="{'group_by': 'responsible_id'}"/>
                         <filter name="by_end_date" string="End Date"
-                                context="{'group_by': 'finish_date'}"/>
+                                context="{'group_by': 'finish_date:day'}"/>
                     </group>
                 </search>
             </field>
@@ -79,6 +91,7 @@
                 <tree string="Task Tree">
                     <field name="name"/>
                     <field name="responsible_id"/>
+                    <!-- field name="finish_date"/ -->
                 </tree>
             </field>
         </record>
@@ -87,7 +100,7 @@
             <field name="name">Task</field>
             <field name="res_model">tasks.task</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree,form,calendar,gantt</field>
+            <field name="view_mode">tree,form,calendar,gantt,graph</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">Create the task
                 </p>
