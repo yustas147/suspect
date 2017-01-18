@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="test_point_view" model="ir.ui.view">
+            <field name="name">test.point.view</field>
+            <field name="model">tasks.task</field>
+            <field name="inherit_id" ref="tasks.task_form_view"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='finish_date']" position="after">
+                    <field name="story"/>
+                </xpath>
+
+            </field>
+        </record>
+
+
+
+    </data>
+</openerp>

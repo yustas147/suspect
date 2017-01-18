@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Inherit Form View to Modify it -->
+        <record id="view_task_filter_inherit" model="ir.ui.view">
+            <field name="name">view.task.filter</field>
+            <field name="model">tasks.task</field>
+            <field name="inherit_id" ref="tasks.task_view_filter"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//filter[@name='responsible']" position="after">
+                    <filter name="finish_date" string="End Date"/>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</openerp>

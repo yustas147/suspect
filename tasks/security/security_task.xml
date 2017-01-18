@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_description_inherited" model="ir.ui.view">
+            <field name="name">view.description.inherited</field>
+            <field name="model">tasks.task</field>
+            <field name="inherit_id" ref="tasks.task_form_view"/>
+            <field name="groups_id" eval="[(6, 0, [ref('project.group_project_user')])]"/>
+            <field name="arch" type="xml">
+
+                <field name="description" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </field>
+
+            </field>
+        </record>
+
+        <record id="view_description_inherited_mgr" model="ir.ui.view">
+            <field name="name">view.description.inheritedmgr</field>
+            <field name="model">tasks.task</field>
+            <field name="inherit_id" ref="tasks.task_form_view"/>
+            <field name="groups_id" eval="[(6, 0, [ref('project.group_project_manager')])]"/>
+            <field name="arch" type="xml">
+
+                <field name="description" position="attributes">
+                    <attribute name="readonly">0</attribute>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_data_finish" model="ir.ui.view">
+            <field name="name">view.data.finish</field>
+            <field name="model">tasks.task</field>
+            <field name="inherit_id" ref="tasks.task_form_view"/>
+            <field name="groups_id" eval="[(6, 0, [ref('project.group_project_user')])]"/>
+            <field name="arch" type="xml">
+
+                <field name="finish_date" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </field>
+
+            </field>
+        </record>
+
+        <record id="view_data_finish_mng" model="ir.ui.view">
+            <field name="name">view.data.finishmng</field>
+            <field name="model">tasks.task</field>
+            <field name="inherit_id" ref="tasks.task_form_view"/>
+            <field name="groups_id" eval="[(6, 0, [ref('project.group_project_manager')])]"/>
+            <field name="arch" type="xml">
+
+                <field name="finish_date" position="attributes">
+                    <attribute name="readonly">0</attribute>
+                </field>
+
+            </field>
+        </record>
+
+        <record id="view_manager" model="ir.ui.view">
+            <field name="name">view.manager</field>
+            <field name="model">tasks.task</field>
+            <field name="inherit_id" ref="tasks.task_form_view"/>
+            <field name="groups_id" eval="[(6, 0, [ref('project.group_project_user')])]"/>
+            <field name="arch" type="xml">
+
+                <field name="manager_id" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </field>
+
+            </field>
+        </record>
+
+        <record id="view_manager_mng" model="ir.ui.view">
+            <field name="name">view.managermng</field>
+            <field name="model">tasks.task</field>
+            <field name="inherit_id" ref="tasks.task_form_view"/>
+            <field name="groups_id" eval="[(6, 0, [ref('project.group_project_manager')])]"/>
+            <field name="arch" type="xml">
+
+                <field name="manager_id" position="attributes">
+                    <attribute name="readonly">0</attribute>
+                </field>
+
+            </field>
+        </record>
+
+    </data>
+</openerp>
